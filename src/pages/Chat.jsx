@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { io } from "socket.io-client";
-import { addMessage, clearMessages } from "./redux/chatSlice";
+import { addMessage, clearMessages } from "../redux/chatSlice";
 import { Link } from "react-router-dom";
 
-const socket = io("http://localhost:3000");
+const socket = io("https://chatappserver-1-lqhr.onrender.com");
 
-function Home() {
+function Chat() {
   const dispatch = useDispatch();
   const messages = useSelector((state) => state.chat.messages);
   const username = useSelector((state) => state.chat.username);
@@ -131,4 +131,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Chat;

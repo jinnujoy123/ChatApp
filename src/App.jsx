@@ -1,8 +1,8 @@
 
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import Home from './Home'
 import Login from './pages/Login'
+import Chat from './pages/Chat'
 
 function App() {
  
@@ -12,7 +12,7 @@ function App() {
      
   <Routes>
     <Route path='/' element={<Login/>}/>
-    <Route path="/chat" element={<Home />} />
+    <Route path="/chat" element={<Chat />} />
   </Routes>
 
     </>
